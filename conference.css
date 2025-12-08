@@ -101,8 +101,20 @@ h1 {
     font-weight: 900;
     color: var(--primary);
     line-height: 1.1;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     letter-spacing: -1px;
+}
+
+/* Banner Image */
+.banner-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3rem;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.3s forwards;
 }
 
 .subtitle {
@@ -339,6 +351,124 @@ footer p {
     margin: 0;
     font-weight: 500;
     color: var(--accent);
+}
+
+/* Details Section (Accommodation & Venue) */
+.details-section {
+    margin-bottom: 3rem;
+}
+
+.detail-card {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02), 0 12px 24px rgba(0, 0, 0, 0.04);
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+    border-left: 4px solid var(--highlight);
+}
+
+.detail-card:nth-of-type(1) {
+    animation-delay: 0.8s;
+}
+
+.detail-card:nth-of-type(2) {
+    animation-delay: 0.9s;
+}
+
+.detail-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 1.25rem;
+    font-weight: 700;
+}
+
+.detail-card p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text);
+    margin-bottom: 1rem;
+}
+
+.detail-card p:last-child {
+    margin-bottom: 0;
+}
+
+.detail-card a {
+    color: var(--highlight);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom-color 0.2s ease;
+}
+
+.detail-card a:hover {
+    border-bottom-color: var(--highlight);
+}
+
+/* Organizers Section */
+.organizers-section {
+    background: var(--card-bg);
+    padding: 3rem;
+    border-radius: 16px;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02), 0 12px 24px rgba(0, 0, 0, 0.04);
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out 1s forwards;
+}
+
+.organizers-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.organizers-list {
+    margin-bottom: 1.5rem;
+}
+
+.organizer {
+    font-size: 1.1rem;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.organizer::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--highlight);
+    font-weight: bold;
+}
+
+.contact-email {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.contact-email p {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.95rem;
+    color: var(--text);
+}
+
+.contact-email a {
+    color: var(--highlight);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom-color 0.2s ease;
+}
+
+.contact-email a:hover {
+    border-bottom-color: var(--highlight);
 }
 
 @media (max-width: 768px) {
