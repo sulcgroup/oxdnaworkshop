@@ -1,0 +1,395 @@
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<style>
+    tr {
+        height: 20px;
+    }
+
+    .timelabel {
+        text-align: right;
+    }
+
+    tr.hour-divider td {
+        border-top: 2px solid #000;
+    }
+
+    .timelabel {
+        position: relative;
+        bottom: 5px; /* half of the 20px row height */
+    }
+
+    tr.hour-divider td.timelabel {
+        border-top: 2px solid #000;
+        position: relative;
+        top: -5px; /* match your label offset */
+    }
+
+    td + td {
+        border-left: 1px solid #000;
+    }
+
+    tbody tr:first-child td {
+        text-align: center;
+        font-weight: bold;
+        border-bottom: 3px double #000;
+    }
+
+    /* Shrink non-header body text to make cells smaller */
+    tbody td {
+        font-size: 12px; /* smaller body text */
+        padding: 2px 4px; /* reduce padding to shrink cells */
+        line-height: 1.1;
+    }
+
+    /* Keep the first row (column headers) larger and centered */
+    tbody tr:first-child td {
+        font-size: 14px;
+        padding: 6px 4px;
+    }
+
+    /* Keep time labels slightly larger for readability */
+    td.timelabel, td.timelabel .label-inner {
+        font-size: 13px;
+        padding-right: 8px;
+    }
+
+    /* Reduce bold text weight slightly to fit better */
+    td strong, td b, span[style*="font-weight:bold"] {
+        font-weight: 600;
+        font-size: 12px;
+    }
+
+    /* Ensure table uses compact spacing */
+    table {
+        border-collapse: collapse;
+    }
+
+    td, th {
+        border-spacing: 0;
+    }
+
+    /* Minor visual tweaks for event dividers */
+    td {
+        box-sizing: border-box;
+    }
+
+    /* Ensure hour divider does not draw through time labels */
+    tr.hour-divider td:not(.timelabel) {
+        border-top: 2px solid #000;
+    }
+
+    /* Time label inner wrapper sits above the border */
+    td.timelabel {
+        position: relative;
+        padding: 0; /* keep compact */
+    }
+
+    td.timelabel .label-inner {
+        display: inline-block;
+        background: white;
+        position: relative;
+        z-index: 5;
+        transform: translateY(-50%); /* visually lift above the border */
+        padding: 0 6px;
+        line-height: 1;
+        white-space: nowrap;
+    }
+
+</style>
+<table>
+    <tbody>
+    <tr>
+        <td style="width: 6%;"></td>
+        <td style="width: 26%;">2/16</td>
+        <td style="width: 26%;">2/17</td>
+        <td style="width: 26%;">2/18</td>
+        <td style="width: 8%;">2/19</td>
+        <td style="width: 8%;">2/20</td>
+    </tr>
+    <tr>
+        <td class="timelabel"><span class="label-inner">6:30 AM</span></td>
+        <td class="s3" rowspan="10" style="border-bottom: 1px dashed #666">Breakfast</td>
+        <td class="s3" rowspan="10" style="border-bottom: 1px dashed #666">Breakfast</td>
+        <td class="s3" rowspan="10" style="border-bottom: 1px dashed #666">Breakfast</td>
+        <td class="s3" rowspan="10" style="border-bottom: 1px dashed #666">Breakfast</td>
+        <td class="s3" rowspan="10" style="border-bottom: 1px dashed #666">Breakfast</td>
+    </tr>
+    <tr>
+        <td class="timelabel"><span class="label-inner">6:45 AM</span></td>
+    </tr>
+    <tr class="hour-divider">
+        <td class="timelabel"><span class="label-inner">7:00 AM</span></td>
+    </tr>
+    <tr>
+        <td class="timelabel"><span class="label-inner">7:15 AM</span></td>
+    </tr>
+    <tr>
+        <td class="timelabel"><span class="label-inner">7:30 AM</span></td>
+    </tr>
+    <tr>
+        <td class="timelabel"><span class="label-inner">7:45 AM</span></td>
+    </tr>
+    <tr class="hour-divider">
+        <td class="timelabel"><span class="label-inner">8:00 AM</span></td>
+    </tr>
+    <tr>
+        <td class="timelabel"><span class="label-inner">8:15 AM</span></td>
+    </tr>
+    <tr>
+        <td class="timelabel"><span class="label-inner">8:30 AM</span></td>
+    </tr>
+    <tr>
+        <td class="timelabel"><span class="label-inner">8:45 AM</span></td>
+    </tr>
+    <tr class="hour-divider">
+        <td class="timelabel"><span class="label-inner">9:00 AM</span></td>
+        <td class="s5" rowspan="2" style="border-top: 2px solid #000; border-bottom: 1px dashed #666">Break</td>
+        <td class="s5" rowspan="2" style="border-top: 2px solid #000; border-bottom: 1px dashed #666">Break</td>
+        <td class="s5" rowspan="2" style="border-top: 2px solid #000; border-bottom: 1px dashed #666">Break</td>
+        <td class="s5" rowspan="2" style="border-top: 2px solid #000; border-bottom: 1px dashed #666">Break</td>
+        <td class="s5" rowspan="2" style="border-top: 2px solid #000; border-bottom: 1px dashed #666">Break</td>
+    </tr>
+    <tr>
+        <td class="timelabel"><span class="label-inner">9:15 AM</span></td>
+    </tr>
+    <tr>
+        <td class="timelabel"><span class="label-inner">9:30 AM</span></td>
+        <td class="s6" rowspan="3" style="border-bottom: 1px dashed #666"><span style="font-weight:bold;">Invited Speaker Talk</span>:
+            Petr Sulc
+            (ASU): Welcome talk &amp; introduction to the oxDNA ecosystem
+        </td>
+        <td class="s6" rowspan="3" style="border-bottom: 1px dashed #666"><span style="font-weight:bold;">Invited Speaker Talk</span>:
+            Oliver
+            Henrich* (University of Strathclyde): oxDNA3 – Introducing Sequence-Specific Curvature and Elasticity
+            into a Coarse-Grained DNA Model
+        </td>
+        <td class="s6" rowspan="3" style="border-bottom: 1px dashed #666"><span style="font-weight:bold;">Invited Speaker</span>
+            <span style="font-weight:bold;">Talk</span>: Tom Ouldridge* (Imperial College London) Strand displacement
+            in unusual topologies
+        </td>
+        <td class="s3" rowspan="10" style="border-bottom: 1px dashed #666">Hackathon</td>
+        <td class="s3" rowspan="10" style="border-bottom: 1px dashed #666">Hackathon</td>
+    </tr>
+    <tr>
+        <td class="timelabel"><span class="label-inner">9:45 AM</span></td>
+    </tr>
+    <tr class="hour-divider">
+        <td class="timelabel"><span class="label-inner">10:00 AM</span></td>
+    </tr>
+    <tr>
+        <td class="timelabel"><span class="label-inner">10:15 AM</span></td>
+        <td class="s7" rowspan="3" style="border-bottom: 1px dashed #666"><span style="font-weight:bold;">Invited Speaker Talk</span>:
+            Shawn
+            Douglas (UC San Francisco): Decoupling Design from Fabrication: Preparing for Complexity We Can't
+            Yet Imagine
+        </td>
+        <td class="s7" rowspan="3" style="border-bottom: 1px dashed #666"><span style="font-weight:bold;">Invited Speaker Talk</span>:
+            Vladimira
+            Petrakova (Heyrovsky Institute): Plasmon-driven Tuning of Nanodiamond Emission using DNA Origami
+        </td>
+        <td class="s6" rowspan="4" style="border-bottom: 1px dashed #666"><span style="font-weight:bold;">Keynote</span>:
+            Aleksei Aksimentiev
+            (University of Illinois Urbana-Champaign): Multi-resolution simulations of self-assembled DNA systems
+        </td>
+    </tr>
+    <tr>
+        <td class="timelabel"><span class="label-inner">10:30 AM</span></td>
+    </tr>
+    <tr>
+        <td class="timelabel"><span class="label-inner">10:45 AM</span></td>
+    </tr>
+    <tr class="hour-divider">
+        <td class="timelabel"><span class="label-inner">11:00 AM</span></td>
+        <td class="s6" rowspan="3" style="border-top: 2px solid #000; border-bottom: 1px dashed #666"><span
+                style="font-weight:bold;">Invited Speaker Talk</span>: Carlos
+            Castro (Ohio State University): Simulation guided design of nanomechanical DNA devices and assemblies
+        </td>
+        <td class="s6" rowspan="3" style="border-top: 2px solid #000; border-bottom: 1px dashed #666"><span
+                style="font-weight:bold;">Invited Speaker Talk</span>: Zev Bryant
+            (Stanford): Dynamics and mechanics of nucleic acids and nucleoprotein machines
+        </td>
+    </tr>
+    <tr>
+        <td class="timelabel"><span class="label-inner">11:15 AM</span></td>
+        <td class="s6" rowspan="2" style="border-bottom: 1px dashed #666"><span style="font-weight:bold;">Talk: Ryan Krueger</span>*
+            (Harvard):
+            Differentiable Programming for Sensitivity Analysis and Design in Molecular Simulations
+        </td>
+    </tr>
+    <tr>
+        <td class="timelabel"><span class="label-inner">11:30 AM</span></td>
+    </tr>
+    <tr>
+        <td class="timelabel"><span class="label-inner">11:45 AM</span></td>
+        <td class="s5" rowspan="3" style="border-bottom: 1px dashed #666">Lunch</td>
+        <td class="s5" rowspan="3" style="border-bottom: 1px dashed #666">Lunch</td>
+        <td class="s5" rowspan="3" style="border-bottom: 1px dashed #666">Lunch</td>
+    </tr>
+    <tr class="hour-divider">
+        <td class="timelabel"><span class="label-inner">12:00 PM</span></td>
+        <td class="s3" rowspan="4" style="border-top: 2px solid #000; border-bottom: 1px dashed #666">Lunch</td>
+        <td class="s3" rowspan="4" style="border-top: 2px solid #000; border-bottom: 1px dashed #666">Lunch</td>
+    </tr>
+    <tr>
+        <td class="timelabel"><span class="label-inner">12:15 PM</span></td>
+    </tr>
+    <tr>
+        <td class="timelabel"><span class="label-inner">12:30 PM</span></td>
+        <td class="s6" rowspan="3" style="border-bottom: 1px dashed #666"><span style="font-weight:bold;">Invited Speaker Talk</span>:
+            Gaurav
+            Arya* (Duke): Modeling the folding mechanism, surface-placement, and higher-order assembly of DNA
+            origami structures
+        </td>
+        <td class="s6" rowspan="3" style="border-bottom: 1px dashed #666"><span style="font-weight:bold;">Invited Speaker Talk</span>:
+            Cameron
+            Glasscock (Rice): Computational design of nucleic acids and protein-nucleic acid interactions
+        </td>
+        <td class="s6" rowspan="3" style="border-bottom: 1px dashed #666"><span style="font-weight:bold;">Invited Speaker Talk</span>:
+            Flavio
+            Romano (Ca Foscari University) A simulation oriented model for proteins based on oxDNA
+        </td>
+    </tr>
+    <tr>
+        <td class="timelabel"><span class="label-inner">12:45 PM</span></td>
+    </tr>
+    <tr class="hour-divider">
+        <td class="timelabel"><span class="label-inner">1:00 PM</span></td>
+        <td class="s3" rowspan="20" style="border-top: 2px solid #000; border-bottom: 1px dashed #666">Hackathon</td>
+        <td class="s3" rowspan="20" style="border-top: 2px solid #000; border-bottom: 1px dashed #666">Hackathon</td>
+    </tr>
+    <tr>
+        <td class="timelabel"><span class="label-inner">1:15 PM</span></td>
+        <td class="s7" rowspan="3" style="border-bottom: 1px dashed #666"><span style="font-weight:bold;">Invited Speaker Talk</span>:
+            Greg
+            Tikhomirov (UC Berkeley): Programming Addressable Origami Self-Assembly
+        </td>
+        <td class="s7" rowspan="3" style="border-bottom: 1px dashed #666"><span style="font-weight:bold;">Invited Speaker Talk</span>:
+            David Doty
+            (UC Davis): Subdomains and dependent domains in DNA sequence design<br/></td>
+        <td class="s7" rowspan="3" style="border-bottom: 1px dashed #666"><span style="font-weight:bold;">Invited Speaker Talk</span>:
+            John Doye*
+            (Oxford)
+        </td>
+    </tr>
+    <tr>
+        <td class="timelabel"><span class="label-inner">1:30 PM</span></td>
+    </tr>
+    <tr>
+        <td class="timelabel"><span class="label-inner">1:45 PM</span></td>
+    </tr>
+    <tr class="hour-divider">
+        <td class="timelabel"><span class="label-inner">2:00 PM</span></td>
+        <td class="s6" rowspan="2" style="border-top: 2px solid #000; border-bottom: 1px dashed #666"><span
+                style="font-weight:bold;">Talk</span>: Michael Matthies
+            (Technical University Munich): OAT boilerplate and other tools to make consistent, reproducible
+            simulations
+        </td>
+        <td class="s3" rowspan="4" style="border-top: 2px solid #000; border-bottom: 1px dashed #666">Poster Session 2
+        </td>
+        <td class="s7" rowspan="8" style="border-top: 2px solid #000; border-bottom: 1px dashed #666">Snack &amp;
+            Additional Activities TBD
+        </td>
+    </tr>
+    <tr>
+        <td class="timelabel"><span class="label-inner">2:15 PM</span></td>
+    </tr>
+    <tr>
+        <td class="timelabel"><span class="label-inner">2:30 PM</span></td>
+        <td class="s7" rowspan="2" style="border-bottom: 1px dashed #666"><span style="font-weight:bold;">Talk</span>:
+            Eryk Ratajczyk (Oxford):
+            Controlling DNA-RNA strand displacement kinetics with base distribution
+        </td>
+    </tr>
+    <tr>
+        <td class="timelabel"><span class="label-inner">2:45 PM</span></td>
+    </tr>
+    <tr class="hour-divider">
+        <td class="timelabel"><span class="label-inner">3:00 PM</span></td>
+        <td class="s6" rowspan="2" style="border-top: 2px solid #000; border-bottom: 1px dashed #666">
+            <span style="font-weight:bold;">Talk</span>: Rizal Hariadi (ASU) Multi-axial DNA origami force spectroscopy
+            unlocks conformational dynamics hidden under single-axial tension
+        </td>
+        <td class="s6" rowspan="3" style="border-top: 2px solid #000; border-bottom: 1px dashed #666">
+            <span style="font-weight:bold;">Invited Speaker Talk:</span> Do-Nyun Kim* (Seoul National University) Toward
+            generative design of DNA origami
+        </td>
+    </tr>
+    <tr>
+        <td class="timelabel"><span class="label-inner">3:15 PM</span></td>
+    </tr>
+    <tr>
+        <td class="timelabel"><span class="label-inner">3:30 PM</span></td>
+        <td class="s3" rowspan="2" style="border-bottom: 1px dashed #666">Snack</td>
+    </tr>
+    <tr>
+        <td class="timelabel"><span class="label-inner">3:45 PM</span></td>
+        <td class="s3" style="border-bottom: 1px dashed #666">Snack</td>
+    </tr>
+    <tr class="hour-divider">
+        <td class="timelabel"><span class="label-inner">4:00 PM</span></td>
+        <td class="s6" rowspan="2" style="border-top: 2px solid #000; border-bottom: 1px dashed #666"><span
+                style="font-weight:bold;">Talk</span>: Daniel Duke (Duke):
+            Predicting the pathways of DNA origami folding with a new mesoscopic model
+        </td>
+        <td class="s6" rowspan="2" style="border-top: 2px solid #000; border-bottom: 1px dashed #666"><span
+                style="font-weight:bold;">Talk</span>: Matthew Sample (ASU):
+            Unlocking the Thermodynamics of DNA Origami Dimerization via Restrained Umbrella Sampling
+        </td>
+        <td class="s6" rowspan="6" style="border-top: 2px solid #000">Carlos Castro MagicDNA Tutorial</td>
+    </tr>
+    <tr>
+        <td class="timelabel"><span class="label-inner">4:15 PM</span></td>
+    </tr>
+    <tr>
+        <td class="timelabel"><span class="label-inner">4:30 PM</span></td>
+        <td class="s7" rowspan="2" style="border-bottom: 1px dashed #666"><span style="font-weight:bold;">Talk</span>:
+            Erik Poppleton (Heidelberg
+            University): Connecting to the wider world of nucleic acid simulations
+        </td>
+        <td class="s7" rowspan="2" style="border-bottom: 1px dashed #666">
+            <span style="font-weight:bold;">Talk</span>: Jared Huzar (UC Berkeley) High-Throughput Characterization and
+            Prediction of the Thermal Stability of Multivalent DNA Interactions
+        </td>
+    </tr>
+    <tr>
+        <td class="timelabel"><span class="label-inner">4:45 PM</span></td>
+    </tr>
+    <tr class="hour-divider">
+        <td class="timelabel"><span class="label-inner">5:00 PM</span></td>
+        <td class="s3" rowspan="4" style="border-top: 2px solid #000; border-bottom: 1px dashed #666">Poster Session 1</td>
+        <td class="s3" rowspan="4" style="border-top: 2px solid #000; border-bottom: 1px dashed #666"></td>
+    </tr>
+    <tr>
+        <td class="timelabel"><span class="label-inner">5:15 PM</span></td>
+    </tr>
+    <tr>
+        <td class="timelabel"><span class="label-inner">5:30 PM</span></td>
+        <td class="s3" rowspan="2" style="border-top: 2px solid #000; border-bottom: 1px dashed #666"></td>
+    </tr>
+    <tr>
+        <td class="timelabel"><span class="label-inner">5:45 PM</span></td>
+    </tr>
+    <tr class="hour-divider">
+        <td class="timelabel"><span class="label-inner">6:00 PM</span></td>
+        <td class="s3" rowspan="6" style="border-top: 2px solid #000">Dinner</td>
+        <td class="s3" rowspan="6" style="border-top: 2px solid #000">Dinner</td>
+        <td class="s3" rowspan="6" style="border-top: 2px solid #000">Dinner</td>
+        <td class="s3" rowspan="6" style="border-top: 2px solid #000">Dinner</td>
+        <td class="s3" rowspan="6" style="border-top: 2px solid #000">Dinner</td>
+    </tr>
+    <tr>
+        <td class="timelabel"><span class="label-inner">6:15 PM</span></td>
+    </tr>
+    <tr>
+        <td class="timelabel"><span class="label-inner">6:30 PM</span></td>
+    </tr>
+    <tr>
+        <td class="timelabel"><span class="label-inner">6:45 PM</span></td>
+    </tr>
+    <tr class="hour-divider">
+        <td class="timelabel"><span class="label-inner">7:00 PM</span></td>
+    </tr>
+    <tr>
+        <td class="timelabel"><span class="label-inner">7:15 PM</span></td>
+    </tr>
+    </tbody>
+</table>
